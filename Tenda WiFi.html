@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://tendawifi.com/main.html -->
+<html class="main-html lang-cn" style=""><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <!-- OEMTAG -->
+    <title>Tenda WiFi</title>
+    <meta name="description" content="Tenda wifi">
+    <meta name="author" content="E.Tw">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- Le styles -->
+    <link href="./Tenda WiFi_files/reasy-ui.css" rel="stylesheet">
+    <link href="./Tenda WiFi_files/icon.css" rel="stylesheet">
+    <link rel="icon" href="http://tendawifi.com/favicon.ico?02b2f23e38f902ee64558990ac0203c6" type="image/x-icon">
+    <link rel="shortcut icon" href="http://tendawifi.com/favicon.ico?02b2f23e38f902ee64558990ac0203c6" type="image/x-icon">
+
+    <!--[if IE 6]>
+        <link href="css/ie6.css?02b2f23e38f902ee64558990ac0203c6" rel="stylesheet">
+        <script src="js/libs/DD_belatedPNG_0.0.8a-min.js?02b2f23e38f902ee64558990ac0203c6"></script>
+        <script>
+            var isIE6 = true;
+            DD_belatedPNG.fix('*');
+        </script>
+    <![endif]-->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="js/libs/html5shiv.js?02b2f23e38f902ee64558990ac0203c6"></script>
+    <![endif]-->
+    <script>
+        // add by xc 2019.09.29 跨域iframe刷新问题
+        if (window !== top) {
+            // 子iframe通知父窗体
+            parent.postMessage("corssOrigin", "*");
+        }
+
+        var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+        var eventer = window[eventMethod];
+        var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+        eventer(messageEvent, function (e) {
+            // 响应子iframe，刷新当前父窗体
+            if (e.data === 'corssOrigin') {
+                window.location.reload();
+            }
+        }, false);
+    </script>
+    <script src="./Tenda WiFi_files/macro_config.js.下载"></script>
+    <script src="./Tenda WiFi_files/b28n_async.js.下载"></script>
+    <script>
+        B.setTextDomain(["translate"]);
+    </script>
+
+
+</head>
+
+<body class="main-body scroll" style="background: #eee;" data-new-gr-c-s-check-loaded="14.1029.0" data-gr-ext-installed="">
+    <noscript><div style="color:firebrick">
+            <h4>Error! The browser does not support JavaScript.  Please enable JavaScript or try another browser compatible with JavaScript to experience more features of the device. </h4>
+        </div></noscript>
+    <div class="container" style="background:#fff;">
+        <div class="">
+            <div class="nav" id="main-nav">
+                <div class="nav-logo"></div>
+                <div id="main-nav-label" class="nav-label" style="top: 73px;"></div>
+                <ul>
+                    <li class="nav-list active"><a href="http://tendawifi.com/main.html#system-status"><span class="nav-ico r-icon-internet"></span>网络状态</a></li>
+                    <li class="nav-list"><a href="http://tendawifi.com/main.html#internet-setting"><span class="nav-ico r-icon-internet-setting"></span>外网设置</a></li>
+                    <li class="nav-list"><a href="http://tendawifi.com/main.html#wireless-setting"><span class="nav-ico r-icon-wifi-setting"></span>无线设置</a></li>
+                    <li class="nav-list" id="nav-guest"><a href="http://tendawifi.com/main.html#guest-setting"><span class="nav-ico r-icon-guest"></span>访客网络</a></li>
+                    <li class="nav-list"><a href="http://tendawifi.com/main.html#parent-control"><span class="nav-ico r-icon-parent-control"></span>家长控制</a></li>
+                    <li class="nav-list"><a href="http://tendawifi.com/main.html#vpn-setting"><span class="nav-ico r-icon-vpn"></span>VPN服务</a></li>
+                    
+                    <li class="nav-list" id="nav-ipv6"><a href="http://tendawifi.com/main.html#ipv6-setting"><span class="nav-ico r-icon-ipv6"></span>IPv6</a></li>
+                    <li class="nav-list"><a href="http://tendawifi.com/main.html#advance"><span class="nav-ico r-icon-advanced"></span>高级功能</a></li>
+                    <li class="nav-list"><a href="http://tendawifi.com/main.html#system"><span class="nav-ico r-icon-system-manage"></span>系统管理</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="">
+
+            <div class="main-content">
+
+                <!-- section status -->
+                <div class="main-section  main-section-rows active" id="system-status" style="margin-top: 0px; min-height: 800px;">
+                    <div class="lang-set"><a class="lang-toggle" style="float:left; display:none;"><span>简体中文</span><b style="border-top-color:#999" class="caret"></b></a><ul class="lang-menu none" style="top: 43px; z-index: 1000;"><li><a data-country="cn">简体中文</a></li></ul><span class="go-exit" style="float: left; width: 65px;"><a style=" color: #999;" href="http://tendawifi.com/goform/exit">退出</a></span></div><div class="main-section-title">
+                        <span class="main-icons r-icon-internet"></span>
+                        <span>网络状态</span>
+                    </div>
+
+                    <div class="main-section-content status-wrap">
+                        <div class="status-wl">
+                            <div class="status-wl-pic-wrap wireless-line-up" id="status_wl_more">
+
+                                <div class="status-wl-ani-circle"></div>
+                                <div class="status-wl-lineup">
+                                    <!-- <div class="status-wl-ani-circle"></div> -->
+                                    <!-- <div class="status-wl-ani-circle2"></div> -->
+                                </div>
+                                <div class="status-wl-pic-lineup"></div>
+                                <div class="status-wl-line"></div>
+                            </div>
+
+                            <div class="status-wl-info">
+                                <p class="txt-center"></p>
+                                <div id="status_wl_info_txt" class="none">
+                                    <div class="status-24g">2.4 GHz:<i>&nbsp;</i><span class="wl24g-name"></span><span class="wl24g-sec"></span></div>
+                                    <div class="status-5g">5 GHz:<i>&nbsp;</i><span class="wl5g-name"></span><span class="wl5g-sec"></span></div>
+                                </div>
+                                <div id="status_wl_double_txt" class="" style="margin-top: 35px;">
+                                    <!--TODO translate-->
+                                    <div class="status-24g">2.4GHz/5GHz:<i>&nbsp;</i><span class="wl-name" title="Visa">Visa</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: relative; top:50px;">
+                            <!--Router 模式-->
+                            <div id="internetWrap" class="status-net txt-center">
+                                <div class="status-internet-icon">
+                                </div>
+                                <div class="status-internet-disable none"></div>
+                                <p class="txt-center status-text-info">互联网</p>
+                            </div>
+
+                            <div class="status-wanstatus" id="wanStatusNumber">
+                                <div class="line-status-up show-info-wan clickable" id="line_status" data-target="1">
+                                </div>
+                                <div class="line-status-disable none" id="wan1StatusWrap">
+                                    <div class="line-disable-link">
+                                        <span class="show-info-wan clickable" data-target="1">联网失败</span>
+                                    </div>
+                                    <div class="line-disable-icon text-error">
+                                        <div class="show-info-wan clickable" data-target="1">×</div>
+                                    </div>
+                                </div>
+                                <div id="wan2Wrap" class="second-line none">
+                                    <div class="line-status-up show-info-wan clickable" data-target="2"></div>
+                                    <div class="line-status-disable none" id="wan2StatusWrap">
+
+                                        <div class="line-disable-link">
+                                            <span class="show-info-wan clickable" data-target="2">联网失败</span>
+                                        </div>
+                                        <div class="line-disable-icon text-error">
+                                            <div class="show-info-wan clickable" data-target="2">×</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end Router 模式-->
+
+                            <!--WISP-->
+                            <div id="wispWrap" class="status-wisp none">
+                                <div class="status-router txt-center">
+                                    <div class="upper status-router-content"></div>
+                                    <p class="txt-center status-text-info">上级路由器</p>
+                                </div>
+                                <div class="status-wisp-content">
+
+                                    <div class="status-wisp-disable none" id="wispConnectStatus">
+                                        <div class="line-disable-link">
+                                            <span class="show-info-wisp clickable">中继失败</span>
+                                        </div>
+                                        <div class="line-disable-icon text-error">
+                                            <div class="show-info-wisp clickable">×</div>
+                                        </div>
+                                    </div>
+                                    <div class="show-info-wisp" id="statusWispConnect"></div>
+                                </div>
+                            </div>
+                            <!--End WISP-->
+
+                            <!--AP模式-->
+                            <div id="statusApWrap" class="status-ap-content none">
+                                <div class="status-router txt-center">
+                                    <div class="upper status-router-content"></div>
+                                    <p class="txt-center status-text-info">上级路由器</p>
+                                </div>
+
+                                <div class="status-repeater-status" id="apStatusNumber">
+                                    <div class="line-status-up clickable"></div>
+                                    <div class="line-status-disable none">
+                                        <div class="line-disable-link">
+                                            <span class="show-info-ap clickable" data-lang="Connection failed!">连接失败</span>
+                                        </div>
+                                        <div class="line-disable-icon text-error">
+                                            <div class="clickable">×</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End AP模式-->
+
+                            <div class="status-router txt-center" id="routerStatus">
+                                <div class="status-router-content"></div>
+                                <p class="txt-center status-text-info">路由器</p>
+                            </div>
+                            <div class="line-status"></div>
+
+                            <div class="device-content no-usb-content">
+                                <div class="status-usb device-content-list none" id="usbWrap">
+                                    <div class="device-content-icon"></div>
+                                    <div class="device-content-text">
+                                        <span>USB：</span><span class="cn-none">&nbsp;&nbsp;</span><span id="status_usb_txt">undefined台</span>
+                                    </div>
+                                </div>
+                                <div class="status-online-list device-content-list" id="onlineList">
+                                    <div class="device-content-icon"></div>
+                                    <div class="device-content-text">
+                                        <span>在线：</span><span class="cn-none">&nbsp;&nbsp;</span><span id="clientNum">8台</span>
+                                    </div>
+                                </div>
+                                <!-- OEMTAG EXTENDER -->
+                                <div class="status-extender device-content-list" id="statusExtender">
+                                    <div class="device-content-icon"></div>
+                                    <div class="device-content-text">
+                                        <span>信号放大器</span>
+                                    </div>
+                                </div>
+                                <!-- OEM END -->
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="status-info-content txt-center" id="statusWanInfo">
+                        <div class="status-info-content-station">
+                            <div class="status-info-text">
+                                <span><img src="./Tenda WiFi_files/upspeed.png"></span>
+                                <span id="statusUploadSpeed">87.0KB/s</span>
+                                <span>&nbsp;</span>
+                                <span style="color: #e2e2e2;">|</span>
+                                <span>&nbsp;</span>
+                                <span><img src="./Tenda WiFi_files/downspeed.png"></span>
+                                <span id="statusDownloadSpeed">5.2MB/s</span>
+                            </div>
+                            <div class="status-info-text none">
+                                <span>--</span>
+                            </div>
+                            <span class="status-info-tips">实时网速</span>
+                        </div>
+                        <div class="status-info-content-verticality"></div>
+                        <div class="status-info-content-station" id="statusMutilWanInfo">
+                            <div class="status-info-text" id="statusWan1Ip">10.110.175.144</div>
+                            <div class="status-info-text" id="statusWan2Ip"></div>
+                            <span class="status-info-tips">WAN口IP</span>
+                        </div>
+                        <div class="status-info-content-verticality"></div>
+                        <div class="status-info-content-station">
+                            <div class="status-info-text">
+                                <span id="curVersion">V16.03.07.35_cn</span>
+                                <!-- OEMTAG ONLINEUPGRADE -->
+                                <span class="directupgrade">
+                                    <span class="btn-versions">NEW</span>
+                                </span>
+                                <!-- END -->
+                            </div>
+                            <span class="status-info-tips">软件版本</span>
+
+                        </div>
+                    </div>
+                    <!--显示LAN 信息-->
+                    <div class="status-info-content txt-center none" id="statusApInfo">
+                        <div class="status-info-content-station">
+                            <div class="status-info-text">
+                                <span id="statusLanMac"></span>
+                            </div>
+                            <span class="status-info-tips">MAC地址</span>
+                        </div>
+                        <div class="status-info-content-verticality"></div>
+                        <div class="status-info-content-station">
+                            <div class="status-info-text" id="statusLanIp"></div>
+                            <span class="status-info-tips">LAN口IP</span>
+                        </div>
+                        <div class="status-info-content-verticality"></div>
+                        <div class="status-info-content-station">
+                            <div class="status-info-text">
+                                <span id="apCurVersion">V16.03.07.35_cn</span>
+                                <span class="directupgrade"><span class="btn-versions">NEW</span></span></div>
+                            <span class="status-info-tips">软件版本</span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- section internet-setting -->
+                <div class="main-section" id="internet-setting" style="min-height: 800px;">
+                    <div class="lang-set"><a class="lang-toggle" style="float:left; display:none;"><span>简体中文</span><b style="border-top-color:#999" class="caret"></b></a><ul class="lang-menu none" style="top: 43px; z-index: 1000;"><li><a data-country="cn">简体中文</a></li></ul><span class="go-exit" style="float: left; width: 65px;"><a style=" color: #999;" href="http://tendawifi.com/goform/exit">退出</a></span></div><div class="main-section-title">
+                        <span class="main-icons r-icon-internet-setting"></span>
+                        <span>外网设置</span>
+                    </div>
+                    <div class="main-section-content">
+                        <div class="control-group none" id="notAllowTip">
+                            <p class="red txt-center">当前连接方式是无线信号放大（Client+AP）模式，请前往无线设置修改连接配置</p>
+                        </div>
+                        <div id="mutliWanWrap">
+                            <div class="control-group">
+                                <label class="control-label">双线路接入：</label>
+                                <div class="controls">
+                                    <div id="multiWanEn" class="btn-off"></div>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label"></label>
+                                <div class="controls">
+                                    <div id="multiWanEnTips" class="txt-help-tips none">启用后，路由器LAN1口将作为WAN2口使用，DDNS/DMZ主机/虚拟服务器/远端WEB管理仅对WAN1生效。</div>
+                                    <div id="multiWanOffTips" class="txt-help-tips">启用后，路由器可支持同时使用两条线路接入互联网以实现网速叠加</div>
+                                </div>
+                            </div>
+                            <hr class="txt-help-tips">
+                        </div>
+                        <div id="internet-form">
+                            <input type="hidden" name="connect" id="connect" value="1">
+                            <input type="hidden" name="lanIp" id="lanIp">
+                            <input type="hidden" name="lanMask" id="lanMask">
+                            <form id="wan1SetWrap">
+                                <div class="control-group">
+                                    <label id="wanLabelTis" class="control-label">WAN口：</label>
+                                    <div class="controls controls-text">
+                                        <span id="lineUpImg" class="line-up"></span>
+                                        <span id="lineUpTips">已插网线</span>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">联网方式：</label>
+                                    <div class="controls">
+                                        <select name="netWanType" class="input-append" id="netWanType">
+                                        </select>
+                                        <br>
+                                        <span class="select-tab red"></span>
+                                    </div>
+                                </div>
+                                <div id="ppoe_set" class="none">
+                                    <div class="control-group">
+                                        <label class="control-label">宽带账号：</label>
+                                        <div class="controls">
+                                            <input type="text" class="validatebox" id="adslUser" name="adslUser" maxlength="128" required="required" data-options="{&quot;type&quot;:&quot;ppoe&quot;}">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">宽带密码：</label>
+                                        <div class="controls">
+                                            <input type="password" class="validatebox" id="adslPwd" name="adslPwd" maxlength="128" required="required" data-options="{&quot;type&quot;:&quot;ppoe&quot;}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="double_access" class="none">
+                                    <div id="serverInfo">
+                                        <div class="control-group">
+                                            <label class="control-label">服务器IP/域名：</label>
+                                            <div class="controls">
+                                                <input type="text" class="validatebox" id="vpnServer" maxlength="63" name="vpnServer" required="required" data-options="{&quot;type&quot;:&quot;domain&quot;}">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">用户名：</label>
+                                            <div class="controls">
+                                                <input type="text" class="validatebox" id="vpnUser" name="vpnUser" maxlength="128" required="required" data-options="{&quot;type&quot;:&quot;ppoe&quot;}">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">密码：</label>
+                                            <div class="controls">
+                                                <input type="password" class="validatebox" id="vpnPwd" name="vpnPwd" maxlength="128" required="required" data-options="{&quot;type&quot;:&quot;ppoe&quot;}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label head-text">地址类型：</label>
+                                        <div class="controls">
+                                            <label class="radio"><input type="radio" name="vpnWanType" value="1" checked="">动态IP</label>
+                                            <label class="radio">
+                                                <input type="radio" name="vpnWanType" value="0">静态IP</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="control-group" id="dnsType">
+                                    <label class="control-label">DNS设置：</label>
+                                    <div class="controls">
+                                        <select name="dnsAuto" class="input-append" id="dnsAuto">
+                                            <option value="1">自动获取</option>
+                                            <option value="0">手动设置</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div id="static_ip" class="none">
+                                    <div class="control-group">
+                                        <label class="control-label">IP地址：</label>
+                                        <div class="controls">
+                                            <input type="text" class="validatebox" id="staticIp" name="staticIp" maxlength="15" required="required" data-options="{&quot;type&quot;:&quot;ip&quot;}">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">子网掩码：</label>
+                                        <div class="controls">
+                                            <input type="text" class="validatebox" id="mask" name="mask" maxlength="15" required="required" data-options="{&quot;type&quot;:&quot;wanmask&quot;}">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">默认网关：</label>
+                                        <div class="controls">
+                                            <input type="text" class="validatebox" id="gateway" name="gateway" maxlength="15" required="required" data-options="{&quot;type&quot;:&quot;ip&quot;,&quot;msg&quot;:&quot;Please enter a correct gateway IP address.&quot;}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="dnsContainer">
+                                    <div class="control-group">
+                                        <label class="control-label">首选DNS服务器：</label>
+                                        <div class="controls">
+                                            <input type="text" class="validatebox" id="dns1" name="dns1" maxlength="15" data-options="{&quot;type&quot;:&quot;ip&quot;,&quot;msg&quot;:&quot;Please enter the IP address of the primary DNS server.&quot;}">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">备用DNS服务器：</label>
+                                        <div class="controls">
+                                            <input type="text" class="validatebox" id="dns2" name="dns2" maxlength="15" data-options="{&quot;type&quot;:&quot;ip&quot;,&quot;msg&quot;:&quot;Please enter the IP address of the secondary DNS server.&quot;}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="control-group none">
+                                    <label class="control-label">带宽设置：</label>
+                                    <div class="controls">
+                                        <span id="downSpeedLimit" class="validatebox" data-options="{&quot;type&quot;:&quot;num&quot;,&quot;args&quot;:[1,1000]}" required="required"></span>
+                                        <span>&nbsp;</span>
+                                        <span class="text-muted">兆（Mbps）</span>
+                                    </div>
+                                </div>
+                                <div id="connect_message" class="none" style="clear:both">
+                                    <div class="control-group" id="connectStatusWrap">
+                                        <label class="control-label">联网状态：</label>
+                                        <div class="controls controls-text"><span id="connectStatus"></span></div>
+                                    </div>
+                                    <div class="control-group" id="connect_time">
+                                        <label class="control-label">接入时长：</label>
+                                        <div class="controls controls-text" id="connectTime"></div>
+                                    </div>
+                                </div>
+                                <div class="control-group" style="clear:both">
+                                    <div class="controls">
+                                        <div id="message-err" class="red">&nbsp;</div>
+                                    </div>
+                                </div>
+                                <div class="btn-group control-group">
+                                    <input type="button" id="wan_submit" class="btn btn-normal" value="连接">
+                                </div>
+                            </form>
+                            <!--WAN 2-->
+                            <form id="wan2SetWrap" class="none">
+                                <div class="control-group">
+                                    <hr>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">WAN2口：</label>
+                                    <div class="controls controls-text">
+                                        <span id="lineUpImg2" class="line-up"></span>
+                                        <span id="lineUpTips2">已插网线</span>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">联网方式：</label>
+                                    <div class="controls">
+                                        <select name="netWanType2" class="input-append" id="netWanType2">
+                                            <option value="2">宽带拨号</option>
+                                            <option value="0" selected="">动态IP</option>
+                                            <option value="1">静态IP</option>
+
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div id="ppoe_set2" class="none">
+                                    <div class="control-group">
+                                        <label class="control-label">宽带账号：</label>
+                                        <div class="controls">
+                                            <input type="text" class="validatebox" id="adslUser2" name="adslUser2" maxlength="128" required="required" data-options="{&quot;type&quot;:&quot;ppoe&quot;}">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">宽带密码：</label>
+                                        <div class="controls">
+                                            <input type="password" class="validatebox" id="adslPwd2" name="adslPwd2" maxlength="128" required="required" data-options="{&quot;type&quot;:&quot;ppoe&quot;}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="control-group" id="dnsType2">
+                                    <label class="control-label">DNS设置：</label>
+                                    <div class="controls">
+                                        <select name="dnsAuto2" class="input-append" id="dnsAuto2">
+                                            <option value="1">自动获取</option>
+                                            <option value="0">手动设置</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="static_ip2" class="none">
+                                    <div class="control-group">
+                                        <label class="control-label">IP地址：</label>
+                                        <div class="controls">
+                                            <input type="text" class="validatebox" id="staticIp2" name="staticIp2" maxlength="15" required="required" data-options="{&quot;type&quot;:&quot;ip&quot;}">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">子网掩码：</label>
+                                        <div class="controls">
+                                            <input type="text" class="validatebox" id="mask2" name="mask2" maxlength="15" required="required" data-options="{&quot;type&quot;:&quot;wanmask&quot;}">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">默认网关：</label>
+                                        <div class="controls">
+                                            <input type="text" class="validatebox" id="gateway2" name="gateway2" maxlength="15" required="required" data-options="{&quot;type&quot;:&quot;ip&quot;,&quot;msg&quot;:&quot;Please enter a correct gateway IP address.&quot;}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="dnsContainer2" class="none">
+                                    <div class="control-group">
+                                        <label class="control-label">首选DNS服务器：</label>
+                                        <div class="controls">
+                                            <input type="text" class="validatebox" id="dns12" name="dns12" maxlength="15" data-options="{&quot;type&quot;:&quot;ip&quot;,&quot;msg&quot;:&quot;Please enter the IP address of the primary DNS server.&quot;}">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">备用DNS服务器：</label>
+                                        <div class="controls">
+                                            <input type="text" class="validatebox" id="dns22" name="dns22" maxlength="15" data-options="{&quot;type&quot;:&quot;ip&quot;,&quot;msg&quot;:&quot;Please enter the IP address of the secondary DNS server.&quot;}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">带宽设置：</label>
+                                    <div class="controls">
+                                        <span id="downSpeedLimit2" class="validatebox" data-options="{&quot;type&quot;:&quot;num&quot;,&quot;args&quot;:[1,1000]}" required="required"></span>
+                                        <span>&nbsp;</span>
+                                        <span class="text-muted">兆（Mbps）</span>
+                                    </div>
+                                </div>
+                                <div id="connect_message2" class="none" style="clear:both">
+                                    <div class="control-group" id="connectStatusWrap2">
+                                        <label class="control-label">联网状态：</label>
+                                        <div class="controls controls-text"><span id="connectStatus2"></span></div>
+                                    </div>
+                                    <div class="control-group" id="connect_time2">
+                                        <label class="control-label">接入时长：</label>
+                                        <div class="controls controls-text" id="connectTime2"></div>
+                                    </div>
+                                </div>
+                                <div class="control-group" style="clear:both">
+                                    <div class="controls">
+                                        <div id="message-err2" class="red">&nbsp;</div>
+                                    </div>
+                                </div>
+                                <div class="btn-group control-group">
+                                    <input type="button" id="wan_submit2" class="btn btn-normal" value="连接">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="control-group" style="clear:both">
+                            <div class="controls">
+                                <div id="message-err-all" class="red">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="btn-group control-group none">
+                            <input type="button" id="all_submit" class="btn btn-normal" value="保存">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- section wireless-setting -->
+                <div class="main-section" id="wireless-setting" style="min-height: 800px;">
+                    <div class="lang-set"><a class="lang-toggle" style="float:left; display:none;"><span>简体中文</span><b style="border-top-color:#999" class="caret"></b></a><ul class="lang-menu none" style="top: 43px; z-index: 1000;"><li><a data-country="cn">简体中文</a></li></ul><span class="go-exit" style="float: left; width: 65px;"><a style=" color: #999;" href="http://tendawifi.com/goform/exit">退出</a></span></div><div class="main-section-title">
+                        <span class="main-icons r-icon-wifi-setting"></span>
+                        <span>无线设置</span>
+                    </div>
+                    <div class="main-section-content">
+                        <section class="field-set">
+                            <div class="main-area" id="wrl_ssid_pwd">
+                                <div class="function-img r-icon-wifi"></div>
+                                <div class="function-title">无线名称与密码</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="wrl_wifi_time">
+                                <div class="function-img r-icon-wifi-time"></div>
+                                <div class="function-title">无线定时开关</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="wrl_bridge">
+                                <div class="function-img r-icon-wifi-repeater"></div>
+                                <div class="function-title">无线中继</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="wrl_channel">
+                                <div class="function-img r-icon-channel"></div>
+                                <div class="function-title">无线信道与频宽</div>
+                                <div class="function-status">信道/频宽</div>
+                            </div>
+                            <div class="main-area" id="wrl_signal">
+                                <div class="function-img r-icon-wifi-power"></div>
+                                <div class="function-title">信号强度调节</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="wrl_wps">
+                                <div class="function-img r-icon-wps"></div>
+                                <div class="function-title">WPS</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="wrl_beamforming">
+                                <div class="function-img r-icon-beamforming"></div>
+                                <div class="function-title">Beamforming+</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="wrl_ap_mode">
+                                <div class="function-img r-icon-ap"></div>
+                                <div class="function-title">AP模式</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="wrl_anti_interference">
+                                <div class="function-img r-icon-anti-interference"></div>
+                                <div class="function-title">无线抗干扰</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area none" id="wrl_atf">
+                                <div class="function-img icon-atf"></div>
+                                <div class="function-title">通信公平</div>
+                                <div class="function-status"></div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- section guest-setting -->
+                <div class="main-section" id="guest-setting" style="min-height: 800px;">
+                    <div class="lang-set"><a class="lang-toggle" style="float:left; display:none;"><span>简体中文</span><b style="border-top-color:#999" class="caret"></b></a><ul class="lang-menu none" style="top: 43px; z-index: 1000;"><li><a data-country="cn">简体中文</a></li></ul><span class="go-exit" style="float: left; width: 65px;"><a style=" color: #999;" href="http://tendawifi.com/goform/exit">退出</a></span></div><div class="main-section-title">
+                        <span class="main-icons r-icon-guest"></span>
+                        <span>访客网络</span>
+                    </div>
+                    <div class="main-section-content">
+
+                        <form id="guest-form">
+                            <input type="hidden" id="guestSecurity">
+                            <input type="hidden" id="guestSecurity_5g">
+                            <fieldset>
+                                <div class="control-group">
+                                    <label class="control-label">访客网络：</label>
+                                    <div class="controls">
+                                        <div id="guestEn" class="btn-off"></div>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">2.4G网络名称：</label>
+                                    <div class="controls">
+                                        <input type="text" id="guestSsid" name="guestSsid" maxlength="32" class="validatebox" required="required" data-options="{&quot;type&quot;:&quot;ssid&quot;}">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">5G网络名称：</label>
+                                    <div class="controls">
+                                        <input type="text" id="guestSsid_5g" name="guestSsid_5g" maxlength="32" class="validatebox" required="required" data-options="{&quot;type&quot;:&quot;ssid&quot;}">
+
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">访客网络密码：</label>
+                                    <div class="controls">
+                                        <input type="password" id="guestWrlPwd" name="guestWrlPwd" class="validatebox" maxlength="63" data-options="{&quot;type&quot;:&quot;ssidPwd&quot;,&quot;args&quot;:[8,63]}">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">有效时长：</label>
+                                    <div class="controls">
+                                        <select id="effectiveTime" name="effectiveTime" class="input-append">
+                                            <option value="4">4小时</option>
+                                            <option value="8">8小时</option>
+                                            <option value="0">一直有效</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">访客共享网速：</label>
+                                    <div class="controls">
+                                        <span id="shareSpeed" class="validatebox" data-options="{&quot;type&quot;:&quot;speNum&quot;,&quot;args&quot;:[1,1000]}" required="required"></span>&nbsp;&nbsp;<span class="text-muted">兆（Mbps）</span>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <div class="red page-err" id="guest_save_msg">&nbsp;</div>
+                                </div>
+                                <div class="btn-group">
+                                    <input type="button" class="btn btn-normal" id="guest_submit" value="保存">
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- section power-setting -->
+                <div class="main-section" id="parent-control" style="min-height: 800px;">
+                    <div class="lang-set"><a class="lang-toggle" style="float:left; display:none;"><span>简体中文</span><b style="border-top-color:#999" class="caret"></b></a><ul class="lang-menu none" style="top: 43px; z-index: 1000;"><li><a data-country="cn">简体中文</a></li></ul><span class="go-exit" style="float: left; width: 65px;"><a style=" color: #999;" href="http://tendawifi.com/goform/exit">退出</a></span></div><div class="main-section-title">
+                        <span class="main-icons r-icon-parent-control"></span>
+                        <span>家长控制</span>
+                    </div>
+                    <div class="main-section-content">
+                        <div id="parental_list">
+
+                            <table class="table table-fixed">
+                                <thead>
+                                    <tr>
+                                        <th width="40%">设备名称</th>
+                                        <th width="22%">MAC地址</th>
+                                        <th width="22%">在线时长</th>
+                                        <th width="16%">操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="list"></tbody>
+                            </table>
+                            <div class="control-group" style="margin-top:10px;">
+                                <div id="parentErr" class="txt-center red">&nbsp;</div>
+                            </div>
+                            <div style="text-align:right;margin-top: 15px;">
+                                <input type="button" value="+新增" class="btn add btn-action" style="width:87px;height:30px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- section usb-setting -->
+                <div class="main-section" id="usb-setting" style="min-height: 800px;">
+                    <div class="lang-set"><a class="lang-toggle" style="float:left; display:none;"><span>简体中文</span><b style="border-top-color:#999" class="caret"></b></a><ul class="lang-menu none" style="top: 43px; z-index: 1000;"><li><a data-country="cn">简体中文</a></li></ul><span class="go-exit" style="float: left; width: 65px;"><a style=" color: #999;" href="http://tendawifi.com/goform/exit">退出</a></span></div><div class="main-section-title">
+                        <span class="main-icons r-icon-usb"></span>
+                        <span>USB应用</span>
+                    </div>
+                    <div class="main-section-content">
+                        <section class="field-set">
+                            <!-- <div class="main-area none" id="usb_xunlei">
+                                <div class="function-img icon-xunlei-download"></div>
+                                <div class="function-title">迅雷远程下载</div>
+                                <div class="function-status"></div>
+                            </div> -->
+                            <div class="main-area none" id="usb_samba">
+                                <div class="function-img r-icon-file-share"></div>
+                                <div class="function-title">文件共享</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area none" id="usb_dlna">
+                                <div class="function-img r-icon-dlna"></div>
+                                <div class="function-title">DLNA</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area none" id="usb_printer">
+                                <div class="function-img r-icon-printer"></div>
+                                <div class="function-title">打印机共享</div>
+                                <div class="function-status"></div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- section IPv6-setting -->
+                <div class="main-section" id="ipv6-setting" style="min-height: 800px;">
+                    <div class="lang-set"><a class="lang-toggle" style="float:left; display:none;"><span>简体中文</span><b style="border-top-color:#999" class="caret"></b></a><ul class="lang-menu none" style="top: 43px; z-index: 1000;"><li><a data-country="cn">简体中文</a></li></ul><span class="go-exit" style="float: left; width: 65px;"><a style=" color: #999;" href="http://tendawifi.com/goform/exit">退出</a></span></div><div class="main-section-title">
+                        <span class="main-icons r-icon-ipv6"></span>
+                        <span>IPv6</span>
+                    </div>
+                    <div class="main-section-content">
+                        <form id="ipv6-form">
+                            <fieldset>
+                                <div class="control-group">
+                                    <label class="control-label">IPv6</label>
+                                    <div class="controls">
+                                        <div name="IPv6En" id="IPv6En" class="btn-off"></div>
+                                    </div>
+                                </div>
+                                <hr class="txt-help-tips">
+                                <div id="ipv6Cfg" class="none">
+                                    <!-- WAN侧配置 Start -->
+                                    <h2 class="legend">IPv6 WAN设置</h2>
+                                    <div class="control-group">
+                                        <label class="control-label">联网方式</label>
+                                        <div class="controls">
+                                            <select id="conType" name="conType" style="width:228px">
+                                                <option value="DHCP">自动获取</option>
+                                                <option value="PPPoE">PPPoEv6</option>
+                                                <option value="Static">静态IPv6地址</option>
+                                                <option value="6in4">6in4隧道</option>
+                                                <option value="6to4">6to4隧道</option>
+                                                <option value="6rd">6rd隧道</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- PPPoE Start-->
+                                    <div id="pppoeWrap" class="none">
+                                        <div class="control-group">
+                                            <label class="control-label">宽带账号</label>
+                                            <div class="controls">
+                                                <input type="text" required="required" name="ISPusername" id="ISPusername" class="validatebox input-large" maxlength="128" data-options="{&quot;type&quot;:&quot;ppoe&quot;}">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">宽带密码</label>
+                                            <div class="controls">
+                                                <input type="password" required="required" name="ISPpassword" id="ISPpassword" class="validatebox input-large" maxlength="128" data-options="{&quot;type&quot;:&quot;ppoe&quot;}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- PPPoE End-->
+                                    <div id="checkboxWrap" class="none">
+                                        <div class="control-group">
+                                            <div class="controls">
+                                                <label class="checkbox" for="prefixDelegate"><input type="checkbox" id="prefixDelegate">
+                                                    <span>获取IPv6前缀代理</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Static Start-->
+                                    <div id="staticWrap" class="none">
+                                        <div class="control-group">
+                                            <label class="control-label">IPv6地址</label>
+                                            <div class="controls">
+                                                <input type="text" required="required" name="wanAddr" id="wanAddr" class="validatebox input-large" maxlength="128" data-options="{&quot;type&quot;:&quot;ipv6&quot;}">
+                                                <span class="splice">/</span>
+                                                <input type="text" required="required" name="wanAddr" id="wanPrefixLen" class="validatebox input-small" maxlength="3" data-options="{&quot;type&quot;:&quot;num&quot;,&quot;args&quot;:[16,64]}">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">IPv6默认网关</label>
+                                            <div class="controls">
+                                                <input type="text" required="required" name="gateWay" class="validatebox input-large" maxlength="128" id="gateWay" data-options="{&quot;type&quot;:&quot;ipv6LocalLink&quot;}">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">首选IPv6 DNS</label>
+                                            <div class="controls">
+                                                <input type="text" required="required" id="wanPreDNS" name="wanPreDNS" class="validatebox input-large" maxlength="128" data-options="{&quot;type&quot;:&quot;ipv6&quot;}">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">备用IPv6 DNS</label>
+                                            <div class="controls">
+                                                <input type="text" id="wanAltDNS" name="wanAltDNS" class="validatebox input-large" maxlength="128" data-options="{&quot;type&quot;:&quot;ipv6&quot;}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Static End-->
+                                    <!-- 隧道 Start-->
+                                    <div id="tunnelWrap" class="none">
+                                        <div class="control-group remoteIP none">
+                                            <label class="control-label">对端IPv4地址</label>
+                                            <div class="controls">
+                                                <span id="remoteIP" name="remoteIP" class="textboxs-ip validatebox textboxs" required="required" data-options="{&quot;type&quot;: &quot;ip&quot;}"><input type="text" class="text input-mini-medium first" maxlength="3">.<input type="text" class="text input-mini-medium" maxlength="3">.<input type="text" class="text input-mini-medium" maxlength="3">.<input type="text" class="text input-mini-medium" maxlength="3"></span>
+                                            </div>
+                                        </div>
+                                        <div class="control-group intfIPv6 none">
+                                            <label class="control-label">本地IPv6地址</label>
+                                            <div class="controls">
+                                                <label>
+                                                    <input type="text" class="input-large validatebox" name="intfIPv6" id="intfIPv6Addr" data-options="{&quot;type&quot;:&quot;ipv6&quot;}" required="required">
+                                                    <span>/</span>
+                                                    <span name="intfIPv6" id="intfPrefixLen">64</span>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                        <div class="control-group lanMask none">
+                                            <label class="control-label" data-lang="M#ATI#Subnet Mask">子网掩码</label>
+                                            <div class="controls">
+                                                <span id="wanMask" name="wanMask" class="textboxs-mask validatebox textboxs" required="required" data-options="{&quot;type&quot;: &quot;ipv6Mask&quot;}"><input type="text" class="text input-mini-medium first" maxlength="3">.<input type="text" class="text input-mini-medium" maxlength="3">.<input type="text" class="text input-mini-medium" maxlength="3">.<input type="text" class="text input-mini-medium" maxlength="3"></span>
+                                            </div>
+                                        </div>
+                                        <div class="control-group netIPv6 none">
+                                            <label class="control-label">IPv6前缀</label>
+                                            <div class="controls">
+                                                <label>
+                                                    <input type="text" class="input-large validatebox" name="netIPv6" id="netIPv6Addr" required="required" data-options="{&quot;type&quot;:&quot;ipv6prefix&quot;}">
+                                                    <span>/</span>
+                                                    <input type="text" class="input-mini validatebox" name="netIPv6" id="netPrefixLen" data-options="{&quot;type&quot;:&quot;num&quot;,&quot;args&quot;:[16,32]}" required="required">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="red page-err" id="msg-err-wan"></div>
+                                    </div>
+                                    <hr class="txt-help-tips">
+                                    <!-- 隧道 End-->
+                                    <!-- WAN侧 End -->
+                                    <!-- LAN侧 Start -->
+                                    <h2 class="legend">IPv6 LAN设置</h2>
+                                    <div class="control-group">
+                                        <label class="control-label">IPv6 LAN地址</label>
+                                        <div class="controls">
+                                            <!-- data-for 自定义属性，值为对应的wrap，用于显示隐藏 -->
+                                            <select name="lanType" id="lanType" class="input-small" style="width:117px" data-for="lan-manual">
+                                                <option value="auto">自动</option>
+                                                <option value="manual" data-lang="Q#gjI#Manual">手动</option>
+                                            </select>
+                                            <label class="lan-manual none">
+                                                <input type="text" class="input-large validatebox" name="lanAddr" id="lanAddr" data-options="{&quot;type&quot;:&quot;ipv6&quot;}" required="required">
+                                                <span>/</span>
+                                                <span name="lanAddr" id="lanAddr2">64</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="control-group">
+                                        <label class="control-label">LAN前缀</label>
+                                        <div class="controls">
+                                            <select name="prefixType" id="prefixType" class="input-small" style="width:117px" data-for="prefix-manual" disabled="">
+                                                <option value="auto">自动</option>
+                                                <option value="manual" data-lang="Q#gjI#Manual">手动</option>
+                                            </select>
+                                            <label class="prefix-manual none">
+                                                <input type="text" class="input-large validatebox" name="lanPrefix" id="lanPrefix" data-options="{&quot;type&quot;:&quot;ipv6prefix&quot;}" required="required">
+                                                <span>/</span>
+                                                <span name="lanPrefix" id="lanPrefix2">64</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="control-group">
+                                        <label class="control-label" data-lang="D#Gxq#DHCPv6">DHCPv6</label>
+                                        <div class="controls">
+                                            <select name="dhcpEn" id="dhcpEn" class="input-small" style="width:117px" data-for="dhcp-set">
+                                                <option value="1" data-lang="z#kJd#Enable">启用</option>
+                                                <option value="0" data-lang="U#coP#Disable">禁用</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="dhcp-set none">
+                                        <div class="control-group">
+                                            <label class="control-label">DHCPv6地址分配方式</label>
+                                            <div class="controls">
+                                                <select name="dhcpType" id="dhcpType" class="input-small" style="width:117px" data-for="dhcp-manual">
+                                                    <option value="auto">无状态</option>
+                                                    <option value="manual">有状态</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="dhcp-manual none">
+                                            <div class="control-group">
+                                                <label class="control-label">起始ID</label>
+                                                <div class="controls">
+                                                    <input type="text" class="input-large validatebox" id="startID" data-options="{&quot;type&quot;:&quot;ipv6pool&quot;}" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">结束ID</label>
+                                                <div class="controls">
+                                                    <input type="text" class="input-large validatebox" id="endID" data-options="{&quot;type&quot;:&quot;ipv6pool&quot;}" required="required">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="lanDns">
+                                        <div class="control-group">
+                                            <label class="control-label">IPv6 DNS</label>
+                                            <div class="controls">
+                                                <select name="dnsType_v6" id="dnsType_v6" class="input-small" style="width:117px" data-for="dns-manual">
+                                                    <option value="auto">自动</option>
+                                                    <option value="manual" data-lang="Q#gjI#Manual">手动</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="dns-manual none">
+                                            <div class="control-group">
+                                                <label class="control-label">首选IPv6 DNS</label>
+                                                <div class="controls">
+                                                    <input type="text" class="input-large validatebox" id="lanPreDNS" name="lanPreDNS" data-options="{&quot;type&quot;:&quot;ipv6&quot;}" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">备用IPv6 DNS</label>
+                                                <div class="controls">
+                                                    <input type="text" class="input-large validatebox" id="lanAltDNS" name="lanAltDNS" data-options="{&quot;type&quot;:&quot;ipv6&quot;}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="red page-err" id="msg-err-lan"></div>
+                                    </div>
+                                    <!-- LAN侧 End -->
+                                </div>
+                                <div class="control-group">
+                                    <div class="red page-err" id="msg-err"></div>
+                                </div>
+                                <div class="btn-group">
+                                    <input type="button" class="btn btn-normal" id="ipv6Submit" value="保存">
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- section vpn-setting -->
+                <div class="main-section" id="vpn-setting" style="min-height: 800px;">
+                    <div class="lang-set"><a class="lang-toggle" style="float:left; display:none;"><span>简体中文</span><b style="border-top-color:#999" class="caret"></b></a><ul class="lang-menu none" style="top: 43px; z-index: 1000;"><li><a data-country="cn">简体中文</a></li></ul><span class="go-exit" style="float: left; width: 65px;"><a style=" color: #999;" href="http://tendawifi.com/goform/exit">退出</a></span></div><div class="main-section-title">
+                        <span class="main-icons r-icon-vpn"></span>
+                        <span>VPN服务</span>
+                    </div>
+                    <div class="main-section-content">
+                        <section class="field-set">
+                            <div class="main-area" id="vpn_server">
+                                <div class="function-img r-icon-pptp-server"></div>
+                                <div class="function-title">PPTP服务器</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="vpn_online_user">
+                                <div class="function-img r-icon-vpn-online"></div>
+                                <div class="function-title">PPTP在线用户</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="vpn_client">
+                                <div class="function-img r-icon-vpn-client"></div>
+                                <div class="function-title">PPTP/L2TP客户端</div>
+                                <div class="function-status"></div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- section function-setting -->
+                <div class="main-section" id="advance" style="min-height: 800px;">
+                    <div class="lang-set"><a class="lang-toggle" style="float:left; display:none;"><span>简体中文</span><b style="border-top-color:#999" class="caret"></b></a><ul class="lang-menu none" style="top: 43px; z-index: 1000;"><li><a data-country="cn">简体中文</a></li></ul><span class="go-exit" style="float: left; width: 65px;"><a style=" color: #999;" href="http://tendawifi.com/goform/exit">退出</a></span></div><div class="main-section-title">
+                        <span class="main-icons r-icon-advanced"></span>
+                        <span>高级功能</span>
+                    </div>
+                    <div class="main-section-content">
+                        <section class="field-set">
+
+                            <div class="main-area" id="adv_netcontrol">
+                                <div class="function-img r-icon-bandwidth"></div>
+                                <div class="function-title">网速控制</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <!--IPTV-->
+                            <div class="main-area" id="adv_iptv">
+                                <div class="function-img r-icon-iptv"></div>
+                                <div class="function-title">IPTV</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <!-- OEMTAG APP -->
+                            <div class="main-area" id="adv_cloud">
+                                <div class="function-img r-icon-app"></div>
+                                <div class="function-title">APP远程管理</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <!-- END -->
+                            <div class="main-area" id="adv_sleepMode">
+                                <div class="function-img r-icon-power"></div>
+                                <div class="function-title">智能省电</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="adv_led">
+                                <div class="function-img r-icon-led"></div>
+                                <div class="function-title">LED灯控制</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="adv_macFilter">
+                                <div class="function-img r-icon-macfilter"></div>
+                                <div class="function-title">MAC地址过滤</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="adv_firewall">
+                                <div class="function-img r-icon-firewall"></div>
+                                <div class="function-title">防火墙</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="adv_route">
+                                <div class="function-img r-icon-static-route"></div>
+                                <div class="function-title">静态路由</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="adv_ddns">
+                                <div class="function-img r-icon-ddns"></div>
+                                <div class="function-title">DDNS</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="adv_virtualServer">
+                                <div class="function-img r-icon-virtual-server"></div>
+                                <div class="function-title">虚拟服务器</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="adv_dmz">
+                                <div class="function-img r-icon-dmz"></div>
+                                <div class="function-title">DMZ主机</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="adv_upnp">
+                                <div class="function-img r-icon-upnp"></div>
+                                <div class="function-title">UPnP</div>
+                                <div class="function-status"></div>
+                            </div>
+                            
+
+                        </section>
+                    </div>
+                </div>
+
+                <!-- section system-setting -->
+                <div class="main-section" id="system" style="min-height: 800px;">
+                    <div class="lang-set"><a class="lang-toggle" style="float:left; display:none;"><span>简体中文</span><b style="border-top-color:#999" class="caret"></b></a><ul class="lang-menu none" style="top: 43px; z-index: 1000;"><li><a data-country="cn">简体中文</a></li></ul><span class="go-exit" style="float: left; width: 65px;"><a style=" color: #999;" href="http://tendawifi.com/goform/exit">退出</a></span></div><div class="main-section-title">
+                        <span class="main-icons r-icon-system-manage"></span>
+                        <span>系统管理</span>
+                    </div>
+                    <div class="main-section-content">
+                        <section class="field-set">
+                            <div class="main-area" id="sys_lan_status">
+                                <div class="function-img r-icon-lan"></div>
+                                <div class="function-title">局域网设置</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="ip_mac_bind">
+                                <div class="function-img r-icon-static-ip"></div>
+                                <div class="function-title">静态IP分配</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="sys_wan">
+                                <div class="function-img r-icon-wan-parameter"></div>
+                                <div class="function-title">WAN口参数</div>
+                                <div class="function-status">MTU/MAC/速率</div>
+                            </div>
+                            <div class="main-area main-area-restore" id="sys_time">
+                                <div class="function-img r-icon-time"></div>
+                                <div class="function-title">时间设置</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="sys_pwd">
+                                <div class="function-img r-icon-username"></div>
+                                <div class="function-title" data-lang="Login Password.">管理员密码</div>
+                                <div class="function-status">登录密码</div>
+                            </div>
+                            <div class="main-area" id="sys_reboot">
+                                <div class="function-img r-icon-restart"></div>
+                                <div class="function-title" style="white-space: normal">重启与复位</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="sys_upgrade">
+                                <div class="function-img r-icon-upgrade"></div>
+                                <div class="function-title">软件升级</div>
+                                <div class="function-status">软件升级</div>
+                            </div>
+                            <div class="main-area" id="sys_backup">
+                                <div class="function-img r-icon-backup"></div>
+                                <div class="function-title">备份与恢复</div>
+                                <div class="function-status">备份配置到电脑</div>
+                            </div>
+                            <div class="main-area" id="adv_remoteweb">
+                                <div class="function-img r-icon-web-manage"></div>
+                                <div class="function-title">远端WEB管理</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area" id="sys_status">
+                                <div class="function-img r-icon-system-status"></div>
+                                <div class="function-title">系统状态</div>
+                                <div class="function-status">良好</div>
+                            </div>
+                            <div class="main-area main-area-restore" id="sys_log">
+                                <div class="function-img r-icon-log"></div>
+                                <div class="function-title">系统日志</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <div class="main-area main-area-restore" id="sys_auto">
+                                <div class="function-img r-icon-autofixed"></div>
+                                <div class="function-title">系统自动维护</div>
+                                <div class="function-status"></div>
+                            </div>
+                            <!-- <div class="main-area main-area-restore" id="sys_config">
+                                <div class="function-img icon-reset"></div>
+                                <div class="function-title">Reset</div>
+                                <div class="function-status">Clear all settings of the router</div>
+                            </div> -->
+
+                        </section>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="loadding-page none">
+        <img src="./Tenda WiFi_files/loading.gif">
+    </div>
+    <!-- dialog -->
+    <div class="main-dailog none">
+        <div class="fopare-ifmwrap-title">
+            <div id="iframe-msg" class="red"></div>
+            <div id="head_title" class="iframe-title">系统状态</div>
+            <div id="head_title2" class="iframe-title"></div>
+            <div class="iframe-close">×</div>
+
+        </div>
+        <iframe frameborder="0" src="./Tenda WiFi_files/saved_resource.html" class="dailog-iframe"></iframe>
+    </div>
+
+    <div class="save-msg none">
+        <div class="save-msg-con">
+            <div class="save-loading"></div>
+            <div id="page-message"></div>
+        </div>
+    </div>
+
+
+    <script src="./Tenda WiFi_files/j.js.下载"></script>
+    <script src="./Tenda WiFi_files/jquery.mousewheel.min.js.下载"></script>
+    <script src="./Tenda WiFi_files/jquery.easing.1.3.js.下载"></script>
+    <script src="./Tenda WiFi_files/reasy-ui-1.0.3.js.下载"></script>
+    <script src="./Tenda WiFi_files/public.js.下载"></script>
+    <script src="./Tenda WiFi_files/main.js.下载"></script>
+    <script src="./Tenda WiFi_files/drager_zzc.js.下载"></script>
+    <script>/*$(function() {
+    $(".main-dailog").drager(".fopare-ifmwrap-title");
+});*/</script>
+    <!--[if IE 6 ]>
+
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; filter: alpha(opacity=10); z-index:100001;"></div>
+
+    <div style="position: absolute; top: 30%; left: 50%; margin-left: -250px; padding: 50px 0; text-align: center; width:500px;  color: red; background: #333;  filter: alpha(opacity=80);">
+      <h1 style="font-size: 24px; padding-bottom:10px;">Please update your browser!</h1>
+      <p>The router's web manager may not run properly on an earlier browser like ie 6.</p>
+    </div>
+<![endif]-->
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
